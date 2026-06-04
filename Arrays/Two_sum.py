@@ -28,14 +28,43 @@ Space Complexity: O(n)
 """
 
 
-class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        h = {}
+# class Solution:
+#     def twoSum(self, nums: List[int], target: int) -> List[int]:
+#         h = {}
 
-        for i in range(len(nums)):
-            comp = target - nums[i]
+#         for i in range(len(nums)):
+#             comp = target - nums[i]
 
-            if comp in h:
-                return [h[comp], i]
+#             if comp in h:
+#                 return [h[comp], i]
 
-            h[nums[i]] = i
+#             h[nums[i]] = i
+
+sym = [ ("M" , 1000),
+            ("CM" , 900),
+            ("D" , 500),
+            ("CD" , 400),
+            ("C" , 100),
+            ("XC" , 90),
+            ("L" , 50),
+            ("XL" , 40),
+            ("X" , 10),
+            ("IX" , 9),
+            ("V" , 5),
+            ("IV" , 4),
+            ("I" , 1)
+
+        ]
+
+num = 3749
+def integer(num):
+    res = ""
+    for i in sym:
+        while num >= i[1]:
+            res = res + i[0]
+            num = num - i[1]
+    return res
+            
+
+r = integer(num)
+print(r)
