@@ -33,7 +33,7 @@ class Solution(object):
     #! Ascending Order
     def Insertion_Sort_Asc(self,nums):
         
-        for i in range(len(nums)):
+        for i in range(1,len(nums)):
             key = nums[i]
             j = i - 1
             while j>=0 and nums[j]> key:
@@ -46,7 +46,7 @@ class Solution(object):
     #! Descending Order
 
     def Insertion_Sort_Dsc(self,nums):
-        for i in range(len(nums)):
+        for i in range(1,len(nums)):
             key = nums[i]
             j = i-1
             while j>=0 and nums[j]<key:
